@@ -1,0 +1,96 @@
+.login-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-container {
+    flex-basis: 50%;
+    background-image: url('../../assets/bright_room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.container {
+    flex-basis: 50%;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+}
+
+
+
+.main-title {
+    font-family: 'Noto Serif', sans-serif;
+    color: #fb761f;
+    margin-bottom: 15px;
+}
+
+.title {
+    margin-bottom: 20px;
+    color: #2c2c2c;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+}
+
+.anchor-text {
+    color: #007bff;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.anchor-text:hover {
+    text-decoration: underline;
+}
+
+.button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.register-text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
