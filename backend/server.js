@@ -4,6 +4,7 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const expenseRoutes = require('./routes/expensesRoute');
+const reportRoutes = require('./routes/reportsRoutes');
 
 dotenv.config();
 const app = express();
@@ -12,6 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/ExpenseTracker/api/auth', authRoutes);
 app.use('/ExpenseTracker/api/expenses', expenseRoutes);
+app.use('/ExpenseTracker/api/reports', reportRoutes);
 
 
 connectDB();
