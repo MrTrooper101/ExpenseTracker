@@ -2,10 +2,12 @@ import { useState } from 'react';
 import api from '../../services/api.ts';
 import './login.css';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { id, value } = e.target as HTMLInputElement;
@@ -16,9 +18,8 @@ const Login = () => {
         e.preventDefault();
         try {
             const { data } = await api.post('auth/login', formData);
-            alert('Login successful. Token: ' + data.token);
-            // Save token in localStorage and redirect user
             localStorage.setItem('token', data.token);
+            navigate('/dashboard');
         } catch (err) {
             setError((err as { response?: { data?: { message?: string } } }).response?.data?.message || 'An error occurred');
         }

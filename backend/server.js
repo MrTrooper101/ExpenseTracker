@@ -5,6 +5,7 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const expenseRoutes = require('./routes/expensesRoute');
 const reportRoutes = require('./routes/reportsRoutes');
+const dashboardRoutes = require('./routes/dashboardRoute');
 
 dotenv.config();
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use('/ExpenseTracker/api/auth', authRoutes);
 app.use('/ExpenseTracker/api/expenses', expenseRoutes);
 app.use('/ExpenseTracker/api/reports', reportRoutes);
+app.use('/ExpenseTracker/api/dashboard', dashboardRoutes);
 
 
 connectDB();
